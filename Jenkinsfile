@@ -3,6 +3,10 @@ node {
     env.PATH = "${goHome}/bin:${env.PATH}"
     env.GOROOT = "${goHome}"
 
+    stage('SCM') {
+        checkout scm
+    }
+
     stage('Build') {
         sh 'go build src/main.go'
     }
