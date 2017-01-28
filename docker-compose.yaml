@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  unit:
+    image: golang
+    volumes:
+      - ./src:/usr/src/helloworld
+      - /tmp/go:/go
+      - ./target:/usr/src/target
+    working_dir: /usr/src/helloworld
+    command: bash -c "go get -d -v -t && go build -v -o ../target/hello-world-go"
