@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 @Library(['github.com/joostvdg/jenkins-pipeline-lib','github.com/joostvdg/jenkins-pipeline-go']) _
 
-node {
+node('docker') {
     goBuild()
 }
 /*
