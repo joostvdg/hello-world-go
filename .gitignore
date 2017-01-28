@@ -26,3 +26,4 @@ _testmain.go
 .gradle
 build
 vendor
+\.idea/
